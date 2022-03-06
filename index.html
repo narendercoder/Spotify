@@ -13,46 +13,43 @@
     
 </head>
 <body>
-    <div class="music">
+    <div class="music_player" id="music_player">
 
-    <div class="navbar">
-        <a class="navbar-brand" href="#">
-            <img class="brand" src="spotify.png" width="50px">
+    <div class="navbar" id="navbar">
+        <a class="navbar-brand" id="navbar-brand" href="#">
+            <img class="brand" id="brand" src="spotify.png" width="50px">
             <span>spotify</span>
         </a>
       </div>
 
-   <div class="player">
-       <div class="wrapper">
-           <div class="details">
+   <div class="player" id="player">
+       <div class="wrapper" id="wrapper">
+           <div class="details" id="details">
                <div class="now-playing">PLAYING x OF y</div>
-               <div class="track-art"></div>
+               <div class="track-art">
+               </div>
                <div class="track-name">Track Name</div>
                <div class="track-artist">Track Artist</div>
            </div>
+           <audio src="DilGaltiKarBaithaHai.mp3"></audio>
 
-           <div class="slider_container">
+           <div class="progressbar_container" id="progressbar_container">
+               <div class="progress_duration_meter" id="progress_duration_meter">
                <div class="current-time">00:00</div>
-                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
                 <div class="total-duration">00:00</div>
+            </div>
+            <div class="progress_div" id="progress_div"> 
+                <div class="progress" id="progress"></div>
+            </div>
            </div>
 
 
            <div class="buttons">
-               <div class="random-track" onclick="randomTrack()">
-                   <i class="fas fa-random fa-2x" title="random"></i>
-               </div>
-               <div class="prev-track" onclick="prevTrack()">
-                    <i class="fa fa-step-backward fa-2x"></i>
-                </div>
-                <div class="playpause-track" onclick="playpauseTrack()">
-                    <i class="fa fa-play-circle fa-5x"></i>
-                </div>
-                <div class="next-track" onclick="nextTrack()">
-                    <i class="fa fa-step-forward fa-2x"></i>
-                </div>
-                <div class="repeat-track" onclick="repeatTrack()">
-                    <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                    <i class="fas fa-random fa-2x"  id="random-track" title="random"></i>
+                    <i class="fa fa-step-backward fa-2x" id="prev-track"></i>
+                    <i class="fa fa-play-circle fa-5x" id="playpause-track"></i>
+                    <i class="fa fa-step-forward fa-2x " id="next-track"></i>
+                    <i class="fa fa-repeat fa-2x" title="repeat" id="repeat-track"></i>
                 </div>
            </div> 
        </div>
