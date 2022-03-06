@@ -5,49 +5,7 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    overflow: hidden;
 }
-@media only screen and (max-width: 800px) {
-    
-    .navbar{
-        width: 100vw;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        font-size: 1rem;
-    }
-    .navbar-brand{
-        display: flex;
-        align-items: center;
-    }
-    .navbar-brand img{
-        width: 30px;
-    }
-    .player{
-        top: -45px;
-    }
-  }
-
-  @media only screen and (min-width:800px){
-      .navbar{
-         width: 100vw;
-         height: 80px;
-          display: flex;
-          flex-direction: row;
-          font-size: 2.5rem;
-      }
-      .navbar-brand{
-        display: flex;
-        margin-left: 10px;
-      }
-      .navbar-brand img{
-          width: 50px;
-      }
-      .player{
-        top: -75px;
-      }
-  }
-
 .music_player{
     position: relative;
     width: 100vw;
@@ -55,15 +13,47 @@
     overflow: hidden;
     background-color: rgb(15, 15, 15);
 }
+@media only screen and (max-width: 800px) {
+    .navbar{
+        justify-content: center;
+        font-size: 1rem;
+    }
+   
+    .navbar-brand img{
+         width: 30px;
+    }
+  }
+  @media only screen and (min-width: 800px) {
+    .navbar{
+        font-size: 2.5rem;
+    }
+    .navbar_brand{
+        margin-left: 10px;
+    }
+    .navbar-brand img{
+        width: 50px;
+    }
+
+  }
 .navbar{
+    width: 100vw;
+    height: 80px;
     position: relative;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     z-index: 1;
+    padding: 6px;
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
 }
 
 .player{
     position: relative;
-    height: 100vh;
+    top: -70px;
+    height: 50vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -73,12 +63,11 @@
     position: relative;
     height: calc(100vh -80px);
     border: 1px solid transparent;
-    padding: 30px 30px 30px 30px;
+    padding: 30px 30px 0px 30px;
     border-radius: 20px;
     background-color: rgb(27, 27, 27);
     box-shadow:0px 0px 30px rgba(0, 0, 0);
 }
-
 .details{
     position: relative;
     display: flex;
@@ -167,24 +156,19 @@
     padding: 10px;
 }
 .buttons{
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-i,
-i.fa-random,
-i.fa-step-backward,
-i.fa-play-circle,
-i.fa-step-forward,
-i.fa-repeat{
+i{
     padding: 20px;
     color: #1ed760;
     cursor: pointer;
 }
 
 i.randomActive{
-    opacity: 0;
     color: black;
 }
 
